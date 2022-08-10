@@ -1,0 +1,5 @@
+The executor picks up a thread from the threadpool to execute a task. If a thread is not available and new threads cannot be created, 
+then the executor stores these tasks in a queue. A task can also be removed from the queue. If the queue is full, 
+then the queue will start rejecting the tasks.After the task is completed, the framework will not terminate the executing thread immediately. 
+The executor keeps a minimum number of threads in the thread pool even if all of them are not executing some task. 
+But it will terminate the extra threads after the specified duration.
